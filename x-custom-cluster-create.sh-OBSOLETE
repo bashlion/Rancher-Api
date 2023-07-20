@@ -1,4 +1,5 @@
 #!/bin/bash
+##
 ###Set the authentication#####
 RANCHER_URL="https://rancher.domain.com" ##Modify 
 CATTLE_ACCESS_KEY="token-here" ##Modify
