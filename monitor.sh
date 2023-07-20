@@ -4,7 +4,7 @@
 file_to_monitor="ipaddress.txt"
 
 # Path to the script you want to execute on file modification
-script_to_execute="custom-cluster-create.sh"
+script_to_execute="custom-cluster-v3.sh"
 
 # Function to execute the script on file modification
 execute_script_on_modify() {
@@ -19,5 +19,6 @@ while true; do
 
     # When the file is modified, execute the script
     execute_script_on_modify
+    exit
 done
 
