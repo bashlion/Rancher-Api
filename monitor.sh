@@ -10,3 +10,4 @@ while true; do
     execute_script_on_modify
     exit
 done
+#
