@@ -1,6 +1,6 @@
 #!/bin/bash
 file_to_monitor="ipaddress.txt"
-script_to_execute="custom-cluster-v3.sh"
+script_to_execute="custom-cluster-v4.sh"
 execute_script_on_modify() {
     echo "File has been modified. Executing the script..."
     bash "$script_to_execute"

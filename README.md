@@ -15,23 +15,31 @@ This logic behind this script is:
 	2. RANCHER_ACCESS_KEY
 	3. RANCHER_SECRET_KEY
 	4. SSH_USERNAME
+	5. RANCHER_USERNAME --> ONLY USED FOR EMPTY CLUSTER DELETION -- "Passwordless Authentication is required"
+	6. RANCHER_FQDN  --> ONLY USED FOR EMPTY CLUSTER DELETION
 
 5. You will have to add the the node password in the password file in plain text present in the root location (Risky but thats how it is as of now).
    If you have passwordless authentication set then you can comment this step and modify the ssh command at the bottom of the script
 
-6. When the script is run it will first check for the max supported kubernetes version in the SUSE Support matrix.
+6. When the script is run it will first check for the max supported kubernetes version from RANCHER server or in the SUSE Support matrix if that code snippet is enabled
    --> You can comment this and hardcode the value of you want
 
-7. With the base version received it will then search the RKE2 github release page to check and find the latest RKE2 stable version of the supported base version found
+7. The script will first validate is the mentioned ip is accessible or not and only continue if it is.
+
+8. With the base version received it will then search the RKE2 github release page to check and find the latest RKE2 stable version of the supported base version found
 
 8. With all the details it will connect to Rancher and spin up a cluster with a random name starting with cluster-5 digit random number
 
-9. Once the cluster is spin up it will fetch the cluster ip, cluster registration url and set ip as a variable.
+9. Once the cluster is spin up it will fetch the cluster id, cluster registration url and set ip as a variable.
 
-10. It will check connectivity to the IP mentioned in the IP file and ssh into those nodes and execute the registration command.
+10. If it doesnt finds a cluster id it will fail if it finds it will continue
 
-11. If Multiple IP is there it will ssh into each one and execute the registration command
+11. It will check connectivity to the IP mentioned in the IP file and ssh into those nodes and execute the registration command.
 
-12. Finally it will clear the ip file for use again and to avoid duplication.
+12. If the connectivity is affected or broken then it will fail and delete the Empty cluster from Rancher Server if it is reachable it will continue.
+
+13. If Multiple IP is there it will ssh into each one and execute the registration command
+
+14. Finally it will clear the ip file for use again and to avoid duplication.
 
 Please note: This is for testing and not intended to use for production. If you want to use it please use it at your own risk.!!!
