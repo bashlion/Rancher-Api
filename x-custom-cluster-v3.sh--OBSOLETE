@@ -1,4 +1,5 @@
 #!/bin/bash
+##-OBSOLETE
 ###Set the authentication#####
 RANCHER_URL="https://rancher.domain.com" ##--->MODIFY 
 CATTLE_ACCESS_KEY="" ##--->MODIFY 
