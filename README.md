@@ -6,6 +6,9 @@ A new node spinned up by any hypervisor, its IP and credentials.
 The node node should be reachable with the privided ip address and the username and password should be mentioned in respective files correctly
 The IP is to be mentioned in ipaddress file.
 
+When entering the Ip addresses, please make sure all ipaddresses are entered at once in the ipaddress file as it will start creating the cluster as soon as the ip is entered.
+If the ip is added late it wont be picked up and if the script is already executed and completed it will create a new cluster in the added ip address.
+
 # Steps
 This logic behind this script is:
 
