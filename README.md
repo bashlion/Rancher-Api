@@ -18,7 +18,8 @@ This logic behind this script is:
 
 4. You will have to modify the cluster creation script to add:
    
-   ```1. RANCHER_URL
+   ```
+   1. RANCHER_URL
    
    2. RANCHER_ACCESS_KEY
    
