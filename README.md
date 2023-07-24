@@ -18,10 +18,15 @@ This logic behind this script is:
 
 4. You will have to modify the cluster creation script to add:
    *1. RANCHER_UR*
+   
    *2. RANCHER_ACCESS_KEY*
+   
    *3. RANCHER_SECRET_KEY*
+   
    *4. SSH_USERNAME*
+   
    *5. RANCHER_USERNAME --> *ONLY USED FOR EMPTY CLUSTER DELETION -- "Passwordless Authentication is required"**
+   
    *6. RANCHER_FQDN  --> ONLY USED FOR EMPTY CLUSTER DELETION*
 
 6. You will have to add the the node password in the password file in plain text present in the root location (Risky but thats how it is as of now).
