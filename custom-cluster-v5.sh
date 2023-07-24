@@ -9,7 +9,7 @@ CLUSTER_NAME="cluster-$((RANDOM % 90000 + 10000))"
 #############
 ####Check for Kubernetes version supported from Rancher API Directly### taken from https://github.com/superseb/tf-do-rancher2.git
 # Look up latest available -- If you are using this then comment everything from ##Check Max supported - echo "RKE2 Version ..!!!
-ALL_RKE2_K8S=$(curl  -s '$RANCHER_URL/v1-rke2-release/releases' --insecure)
+ALL_RKE2_K8S=$(curl  -s $RANCHER_URL/v1-rke2-release/releases --insecure)
 LATEST_RKE2_K8S=$(echo "$ALL_RKE2_K8S" | jq -r '.data[] | select(.type=="release") | .id' | tail -1)
 RKE2_K8S_VERSION=$LATEST_RKE2_K8S
 ###################################
