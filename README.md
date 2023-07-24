@@ -56,4 +56,4 @@ This logic behind this script is:
 
 14. Finally it will clear the ip file for use again and to avoid duplication.
 
-Please note: This is for testing and not intended to use for production. If you want to use it please use it at your own risk.!!!!
+# Please note: This is for testing and not intended to use for production. If you want to use it please use it at your own risk.!!!!
