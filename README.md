@@ -17,6 +17,7 @@ This logic behind this script is:
 3. The monitor.sh will monitor the ipadress file and as soon as it finds that it has been modified it will execute the cluster creation script.
 
 4. You will have to modify the cluster creation script to add:
+   
    *1. RANCHER_UR*
    
    *2. RANCHER_ACCESS_KEY*
