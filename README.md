@@ -29,10 +29,6 @@ This logic behind this script is:
    3. RANCHER_SECRET_KEY
    
    4. SSH_USERNAME
-
-   5. RANCHER_USERNAME --> ONLY USED FOR EMPTY CLUSTER DELETION -- "Passwordless Authentication is required" --- Will be removed in next version of the script
-   
-   6. RANCHER_FQDN  --> ONLY USED FOR EMPTY CLUSTER DELETION
    ```
 
 6. You will have to add the the node password in the password file in plain text present in the root location (Risky but thats how it is as of now).
